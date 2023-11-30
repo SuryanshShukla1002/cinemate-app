@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 export const Footer = () => {
   return (
     <footer className="bg-white  shadow m-4 dark:bg-gray-800">
