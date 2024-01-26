@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Backup from "../assets/images/backup.png";
 import { useTitlte } from '../Hooks/useTitlte';
-
-
 export const MovieDetail = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
   // eslint-disable-next line
-  const pageTitle = useTitlte(movie.title)
+  const pageTitle = useTitlte(movie.title);
   const image = movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : Backup;
 
   useEffect(() => {
@@ -22,7 +20,7 @@ export const MovieDetail = () => {
   }, [params.id]);
 
   useEffect(() => {
-    document.title = `${movie.title} / Cinemate`
+    document.title = `${movie.title} / Cinemate`;
   });
 
   return (
