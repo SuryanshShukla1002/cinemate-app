@@ -15,7 +15,6 @@ export const MovieList = ({ apiPath, title }) => {
 
         </div>
       </section>
-
     </main>
   );
 }; 
